@@ -1,0 +1,22 @@
+[package]
+authors = ["Robie <robie1373@gmail.com>"]
+readme = "README.md"
+name = "watch-winder"
+version = "0.1.0"
+edition = "2021"
+
+# for cargo flash
+[package.metadata]
+chip = "ATSAMD51J19A"
+
+[profile.release]
+lto = true
+opt-level = 3
+
+[[example]]
+name = "blinky_basic"
+
+[dependencies]
+metro_m4 = "0.12.0"
+panic-halt = "0.2.0"
+
